@@ -1,0 +1,247 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  font-size: 16px;
+}
+
+
+.topo {
+  background-color: #8cd024;
+  padding: 15px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;           
+  justify-content: space-between; 
+  flex-wrap: wrap;                
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  flex-shrink: 0;                
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+
+.topo nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  flex-grow: 1;                  
+  flex-wrap: wrap;               
+}
+
+.topo nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.topo nav ul li a:hover {
+  background-color: #1f602e;
+}
+
+
+h1 {
+  font-family: monospace;
+  text-transform: uppercase;
+  color: #8cd024;
+  text-align: center;
+  font-size: 32px;
+  margin: 30px 0;
+}
+
+
+.formulario {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  color: #8cd024;
+}
+
+input,
+textarea {
+  display: block;
+  margin-bottom: 15px;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px 24px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #8cd024;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f602e;
+}
+
+
+#relatorio {
+  display: none;
+  background: white;
+  color: black;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid #000;
+  max-width: 800px;
+  font-family: monospace;
+}
+
+#relatorio h2 {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+}
+
+.info-header div {
+  width: 48%;
+}
+
+
+.table-box {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table-box th,
+.table-box td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: left;
+}
+
+
+.observacoes {
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1.2;
+}
+
+.observacoes span {
+  display: inline;
+}
+
+
+.assinaturas {
+  margin-top: 50px;
+  border-top: 1px solid #000;
+  padding-top: 20px;
+}
+
+.linha-assinatura {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.linha-assinatura div {
+  flex: 1;
+  text-align: center;
+  min-width: 220px;
+}
+
+.linha-assinatura .linha {
+  border-bottom: 1px solid #000;
+  height: 2px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+
+.codigo-barras {
+  margin-top: 40px;
+  text-align: center;
+  border: 1px dashed #000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .topo {
+    padding: 10px 20px;
+    flex-direction: column;   
+    align-items: center;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .topo nav ul {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #relatorio,
+  #relatorio * {
+    visibility: visible;
+  }
+
+  #relatorio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
